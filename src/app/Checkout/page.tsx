@@ -194,7 +194,9 @@ const CheckOutPage = () => {
                     </div>
                 </div>
             </div>
+            <div className='mt-20'>
             <Features />
+            </div>
         </>
     )
 }

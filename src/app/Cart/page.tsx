@@ -2,11 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "../Component/Footer";
 import Features from "../Component/Features";
+import MainImage from "../Component/MainImage";
 
 const Cart = () => {
   return (
     <>
+    <MainImage 
+    tittle="Carts"
+    />
     <div className="w-full px-4 py-8 max-w-6xl mx-auto">
+
       {/* Cart Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Cart Items */}
@@ -85,7 +90,6 @@ const Cart = () => {
       </div>
     </div>
    <Features />
-  <Footer />
   </>
   );
 };
