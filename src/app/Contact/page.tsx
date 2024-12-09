@@ -35,7 +35,7 @@ const ContactPage = () => {
                             desc: "Mobile: +(84) 546-6789\nHotline: +(84) 456-6789",
                         },
                         {
-                            img: "/images/clock.png",
+                            img: "/Images/clock.png",
                             title: "Working Time",
                             desc: "Monday-Friday: 9:00 - 22:00\nSaturday-Sunday: 9:00 - 21:00",
                         },
