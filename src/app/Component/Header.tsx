@@ -7,17 +7,15 @@ import { IoCartOutline, IoHeartOutline } from 'react-icons/io5'
 const navBar = [
     {name:'Home',link:'/'},
     {name:'Shop',link:'/Shop'},
-    {name:'About',link:''},
-    {name:'Contact',link:''},
+    {name:'About',link:'/About'},
+    {name:'Contact',link:'/Contact'},
 ]
-interface Header {
-    bgHeader?:string,
-}
 
-const Header : React.FC<Header> =({bgHeader}) => {
+
+const Header  =() => {
   return (
     <div>
-    <nav className={`justify-end flex h-[100px] bg-transparent items-center pr-16`}>
+    <nav className={`justify-end flex h-[100px] bg-mainBg items-center pr-16`}>
         <ul className='flex w-[430px] h-[24px] gap-8 font-medium'>
         {navBar.map((navItem, index) => (
             <li key={index}>
@@ -28,9 +26,14 @@ const Header : React.FC<Header> =({bgHeader}) => {
           ))}
         </ul>
         <div className='flex gap-6'>
+          <Link href={'/Account'}>
         <BsPerson  className='text-[24px]'/>
+          </Link>
         <CiSearch  className='text-[24px]'/>
+        <Link href={'/asgaard-sofa'}>
         <IoHeartOutline  className='text-[24px]'/>
+         </Link> 
+
         <Link href = '/Cart'>
         <IoCartOutline  className='text-[24px]'/>
         </Link>

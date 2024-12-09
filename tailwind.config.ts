@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        numBg:'#fbebb5',
         mainColor: '#FBEBB5', 
         customGrey:'#9F9F9F',
         secondBg:'#FAF4F4',

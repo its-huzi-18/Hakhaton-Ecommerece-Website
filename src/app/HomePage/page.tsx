@@ -2,9 +2,10 @@ import Image from 'next/image'
 import React from 'react'
 import { IoMdTime } from 'react-icons/io'
 import { LuCalendar } from 'react-icons/lu'
-import Footer from '../Component/Footer'
+import ProductsItems from '../Component/ProductsItems'
 
 const page = () => {
+
   return (
     <>
     <div className='h-[750px] overflow-hidden bg-mainColor -z-10 justify-end flex items-center'>
@@ -61,56 +62,7 @@ alt='caoch'
 <h2 className='text-[36px] font-medium'>Top Picks For You</h2>
 <h4 className='text-[16px] font-medium'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</h4>
     </div>
-<div className='  flex gap-5 h-[397px]  items-center'>
-<div className='flex flex-col w-[287px] '>
-<Image 
-src={'/Images/guestCaoch.png'}
-width={287}
-height={287}
-alt=''
-/>
-<div className=' w-[212px] h-[96px] flex flex-col'>
-<h3 className='font-medium text-[16px] w-[212px] h-[48px]'>Outdoor bar table and stool</h3>
-<h4 className='w-[158px] h-[36px] font-medium text-[24px]'>Rs. 25,000.00</h4>
-</div>
-</div>
-<div className='flex flex-col w-[287px] '>
-<Image 
-src={'/Images/Granite dining table.png'}
-width={287}
-height={287}
-alt=''
-/>
-<div className='w-[212px] h-[96px] flex flex-col'>
-<h3 className='font-medium text-[16px] w-[212px] h-[48px]'>Granite dining table with dining chair</h3>
-<h4 className='w-[158px] h-[36px] font-medium text-[24px]'>Rs. 25,000.00</h4>
-</div>
-</div>
-<div className='flex flex-col w-[287px] '>
-<Image 
-src={'/Images/Outdoor bar table.png'}
-width={287}
-height={287}
-alt=''
-/>
-<div className='w-[212px] h-[96px] flex flex-col'>
-<h3 className='font-medium text-[16px] w-[212px] h-[48px]'>Outdoor bar table and stool</h3>
-<h4 className='w-[158px] h-[36px] font-medium text-[24px]'>Rs. 25,000.00</h4>
-</div>
-</div>
-<div className='flex flex-col w-[287px] '>
-<Image 
-src={'/Images/Plain console.png'}
-width={287}
-height={287}
-alt=''
-/>
-<div className='w-[212px] h-[96px] flex flex-col'>
-<h3 className='font-medium text-[16px] w-[212px] h-[48px]'>Plain console with teak mirror</h3>
-<h4 className='w-[158px] h-[36px] font-medium text-[24px]'>Rs. 25,000.00</h4>
-</div>
-</div>
-</div>
+<ProductsItems />
 </div>
 <div className='-mt-10 flex justify-center '>
                 <h3 className=' text-[24px] border-b-2 border-black'> View More</h3>
@@ -258,7 +210,6 @@ height={450}
 alt='Group 43'
 />
 </div>
-<Footer />
 </>
   )
 }
