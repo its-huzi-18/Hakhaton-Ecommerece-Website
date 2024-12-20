@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { Poppins } from 'next/font/google';
 import Header from "./Component/Header";
-import { usePathname } from "next/navigation";
 import Footer from "./Component/Footer";
 
 const poppins = Poppins({
@@ -13,7 +11,6 @@ const poppins = Poppins({
   variable: '--font-poppins', // Custom CSS variable
 });
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ecommerce Website",
@@ -29,18 +26,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-// const pathname = usePathname()
-
-  // const bgHeader = pathname === '/' ? 'bg-white' : 'bg-secondaryBg';
 
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header 
-        
-          // bgHeader={bgHeader}
-        
-        />
+        <Header />
         {children}
         <Footer />
         </body>

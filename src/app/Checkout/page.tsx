@@ -23,7 +23,7 @@ const CheckOutPage = () => {
             <br />
             <input
                 type="text"
-                className="w-full sm:w-[211px] h-[75px] border border-black rounded-md mt-2"
+                className="w-full sm:w-[211px] h-[75px] border border-customGrey rounded-md mt-2"
             />
         </label>
     </div>
@@ -33,7 +33,7 @@ const CheckOutPage = () => {
             <br />
             <input
                 type="text"
-                className="w-full sm:w-[211px] h-[75px] border border-black rounded-md mt-2"
+                className="w-full sm:w-[211px] h-[75px] border border-customGrey rounded-md mt-2"
             />
         </label>
     </div>
@@ -45,7 +45,7 @@ const CheckOutPage = () => {
                         <br />
                         <input
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md"
                         />
                         <br />
                         <br />
@@ -54,7 +54,7 @@ const CheckOutPage = () => {
                         <br />
                         <div className=" w-full lg:w-[453px] h-[75px]">
                         <select
-  className="w-full h-full border px-2 border-black rounded-md text-[#9F9F9F]"
+  className="w-full h-full border px-2 border-customGrey rounded-md text-[#9F9F9F]"
   defaultValue=""
 >
   {/* Placeholder option */}
@@ -80,7 +80,7 @@ const CheckOutPage = () => {
                         <br />
                         <input
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md"
                         />
                         <br />
                         <br />
@@ -89,7 +89,7 @@ const CheckOutPage = () => {
                         <br />
                         <input
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md"
                         />
                         <br />
                         <br />
@@ -98,7 +98,7 @@ const CheckOutPage = () => {
                         <br />
                         <div className=" w-full lg:w-[453px] h-[75px]">
                         <select
-  className="w-full h-full border px-2 border-black rounded-md  text-[#9F9F9F]"
+  className="w-full h-full border px-2 border-customGrey rounded-md  text-[#9F9F9F]"
   defaultValue=""
 >
   {/* Placeholder option */}
@@ -127,7 +127,7 @@ const CheckOutPage = () => {
                         <br />
                         <input
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md"
                         />
                         <br />
                         <br />
@@ -136,7 +136,7 @@ const CheckOutPage = () => {
                         <br />
                         <input
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md"
                         />
                         <br />
                         <br />
@@ -145,7 +145,7 @@ const CheckOutPage = () => {
                         <br />
                         <input
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md"
                         />
                         <br />
                         <br />
@@ -154,12 +154,12 @@ const CheckOutPage = () => {
                         <input
                             placeholder="Additional information"
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md text-[#9F9F9F] pl-4"
+                            className="w-full lg:w-[453px] h-[75px] border border-customGrey rounded-md text-[#9F9F9F] pl-4"
                         />
                     </div>
 
                     {/* Right Side: Order Summary */}
-                    <div className="w-full lg:w-[35%]">
+                    <div className="w-full lg:w-[59%]">
                         <div className="flex items-start justify-between">
                             <div className="flex flex-col gap-3">
                                 <h2 className="text-[24px] font-semibold">Product</h2>
@@ -183,13 +183,23 @@ const CheckOutPage = () => {
                             <p className="text-[#9F9F9F] mt-2">
                                 Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
                             </p>
-                            <div className="flex items-center gap-3 mt-6">
-                                <div className="border border-[#9F9F9F] rounded-full w-[14px] h-[14px]"></div>
-                                <h1 className="text-[18px] font-semibold text-[#9F9F9F]">Cash On Delivery</h1>
+                           <div className='flex flex-col mt-6 gap-2'>
+                           <div className="flex items-center gap-3 ">
+                            <div className="border border-[#9F9F9F] rounded-full w-[14px] h-[14px]"></div>
+                            <h1 className="text-[18px] font-semibold text-[#9F9F9F]">Direct Bank Transfer</h1>
                             </div>
+                           <div className="flex items-center gap-3 ">
+                            <div className="border border-[#9F9F9F] rounded-full w-[14px] h-[14px]"></div>
+                            <h1 className="text-[18px] font-semibold text-[#9F9F9F]">Cash On Delivery</h1>
+                            </div>
+                           </div>
+                           <div className="mt-4 text-sm md:text-base text-black/80">
+                           Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <b>privacy policy</b>.
+            </div>
                         </div>
-                        <div className="mt-10">
-                            <button className="w-full lg:w-[318px] h-[64px] border border-black rounded-2xl">Place order</button>
+                        
+                        <div className="mt-10 md:ml-10">
+                            <button className="w-[318px] h-[64px] border border-customGrey rounded-2xl">Place order</button>
                         </div>
                     </div>
                 </div>

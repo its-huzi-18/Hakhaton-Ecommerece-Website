@@ -1,6 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import ProductsItems from '../Component/ProductsItems';
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { AiFillTwitterCircle } from 'react-icons/ai';
+import { IoIosHeartEmpty } from 'react-icons/io';
 
 const AsgaardPage = () => {
     return (
@@ -79,7 +82,7 @@ const AsgaardPage = () => {
                     {/* Size Selection */}
                     <h2 className="mt-8 text-[#9F9F9F]">Size:</h2>
                     <div className="flex items-center gap-3 mt-4">
-                        <button className="w-8 h-8 bg-[#B88E2F] text-white rounded flex items-center justify-center text-sm hover:bg-[#A77A27]">
+                        <button className="w-8 h-8 bg-[#FBEBB5] text-black rounded flex items-center justify-center text-sm hover:bg-[#A77A27]">
                             L
                         </button>
                         <button className="w-8 h-8 bg-[#F9F1E7] rounded flex items-center justify-center text-sm hover:bg-[#B88E2F] hover:text-white">
@@ -95,7 +98,7 @@ const AsgaardPage = () => {
                     <div className="flex items-center gap-3 mt-4">
                         <div className="w-8 h-8 bg-[#816DFA] rounded-full"></div>
                         <div className="w-8 h-8 bg-black rounded-full"></div>
-                        <div className="w-8 h-8 bg-[#B88E2F] rounded-full"></div>
+                        <div className="w-8 h-8 bg-[#CDBA7B] rounded-full"></div>
                     </div>
 
                     {/* Quantity and Actions */}
@@ -110,34 +113,78 @@ const AsgaardPage = () => {
                             Add To Cart
                         </button>
                     </div>
+                    <div className='my-12'>
+<hr />
+<div className='grid grid-cols-[100px_1fr] mt-8'>
+<div className=' flex flex-col justify-center text-customGrey gap-3'>
+    <div>SKU</div>
+    <div>Category</div>
+    <div>Tags</div>
+    <div>Share</div>
+</div>
+<div className='flex flex-col justify-center text-customGrey gap-3'>
+    <div> <span className='mx-2'>:</span> SS001</div>
+    <div> <span className='mx-2'>:</span> Sofas</div>
+    <div> <span className='mx-2'>:</span> Sofa, Chair, Home, Shop</div>
+    <div>
+        <div className='flex gap-2 items-center'>
+    <span className='mx-2 text-customGrey'>:</span>
+        <i className='text-black text-[20px] flex gap-6 items-center'>
+        <FaFacebook />
+        <FaLinkedin />
+        <AiFillTwitterCircle className='text-[24px]'/>
+        </i>
+        <div className='md:ml-32 ml-10'>
+        <IoIosHeartEmpty className='text-[34px] text-red-500' />
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+                    </div>
                 </div>
             </div>
 
+
             {/* Description Section */}
             <div className="px-4 sm:px-16 mt-8">
-                <div className="flex flex-col sm:flex-row items-center justify-around text-center sm:text-left gap-6 sm:gap-16 text-lg sm:text-xl">
-                    <h1 className="font-semibold">Description</h1>
+                <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left md:gap-6 sm:gap-16 text-lg md:text-[24px] sm:text-xl">
+                    <h1>Description</h1>
                     <span className="text-[#9F9F9F]">Additional Information</span>
                     <span className="text-[#9F9F9F]">Reviews [5]</span>
                 </div>
 
-                <div className="mt-6 text-sm sm:text-base text-[#9F9F9F] max-w-prose mx-auto">
+                <div className="mt-8 text-sm sm:text-base text-[#9F9F9F]  mx-auto md:w-[1026px]">
                     <p>
                         Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
                     </p>
                     <br />
                     <p>
-                        Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage-styled engineering. The analogue knobs allow you to fine-tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
+                    Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
                     </p>
                 </div>
             </div>
-
-            <h1 className="text-center text-2xl sm:text-4xl font-semibold mt-16">Related Products</h1>
+            <div className='px-3 md:px-0 mt-10 mb-14 flex-col md:flex-row gap-8 md:gap-0 flex justify-evenly'>
+                <Image 
+                src={'/Images/sofa-fir.png'}
+                width={605}
+                height={348}
+                alt='sofa-fir'
+                />
+                <Image 
+                src={'/Images/sofa2.png'}
+                width={605}
+                height={348}
+                alt='sofa-fir'
+                />
+            </div>
+<hr />
+            <h1 className="text-center text-2xl sm:text-4xl font-semibold mt-14">Related Products</h1>
             <div className="flex justify-center px-4">
                 <ProductsItems />
             </div>
             <div className="mt-10 flex justify-center">
-                <h3 className="pb-2 mb-10 text-lg sm:text-2xl border-b-2 border-black/60">View More</h3>
+                <h3 className="pb-2 my-10 text-lg sm:text-2xl border-b-2 border-black/60">View More</h3>
             </div>
         </>
     );

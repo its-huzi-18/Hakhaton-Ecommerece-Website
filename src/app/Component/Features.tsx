@@ -12,7 +12,7 @@ function Features() {
               <h3 className="text-xl md:text-2xl lg:text-[32px] font-semibold text-black">
                 Free Delivery
               </h3>
-              <p className="w-full md:w-[376px] text-base md:text-lg text-gray-600 mt-1">
+              <p className="w-full md:w-[376px] text-base md:text-lg text-customGrey mt-1">
                 For all orders over $50, consectetur adipiscing elit.
               </p>
             </div>
@@ -21,7 +21,7 @@ function Features() {
               <h3 className="text-xl md:text-2xl lg:text-[32px] font-semibold text-black">
                 90 Days Return
               </h3>
-              <p className="text-base md:text-lg text-gray-600 mt-1">
+              <p className="text-base md:text-lg text-customGrey mt-1">
                 If goods have problems, consectetur adipiscing elit.
               </p>
             </div>
@@ -30,7 +30,7 @@ function Features() {
               <h3 className="text-xl md:text-2xl lg:text-[32px] font-semibold text-black">
                 Secure Payment
               </h3>
-              <p className="text-base md:text-lg text-gray-600 mt-1">
+              <p className="text-base md:text-lg text-customGrey mt-1">
                 100% secure payment, consectetur adipiscing elit.
               </p>
             </div>

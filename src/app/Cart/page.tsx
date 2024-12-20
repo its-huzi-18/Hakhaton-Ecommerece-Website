@@ -12,20 +12,20 @@ const Cart = () => {
         {/* Cart Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2 rounded-lg p-6 bg-white shadow-md">
+          <div className="lg:col-span-2 rounded-lg p-6 bg-white md:shadow-none shadow-md">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-[#FFF9E5]">
-                    <th className="py-2 px-4 text-sm md:text-base">Product</th>
-                    <th className="py-2 px-4 text-sm md:text-base">Price</th>
+                    <th className="py-2 px-4 lg:pl-[7rem] text-sm md:text-base">Product</th>
+                    <th className="py-2 px-4 lg:pl-10 text-sm md:text-base">Price</th>
                     <th className="py-2 px-4 text-sm md:text-base">Quantity</th>
                     <th className="py-2 px-4 text-sm md:text-base">Subtotal</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="py-4 px-4 flex md:flex-row items-center flex-col space-x-4">
+                    <td className="py-4 mt-4 px-4 flex md:flex-row items-center flex-col space-x-4">
                       <Image
                         src="/Images/asgaraad sofa.png"
                         height={100}
@@ -70,9 +70,9 @@ const Cart = () => {
           </div>
 
           {/* Cart Totals */}
-          <div className="bg-[#fff9e5] rounded-lg p-6 shadow-md">
-            <h2 className="text-lg md:text-xl font-semibold mb-4">Cart Totals</h2>
-            <div className="flex justify-between mb-2 text-sm md:text-base">
+          <div className="bg-[#fff9e5] rounded-lg p-6  shadow-md">
+            <h2 className="text-lg md:text-[32px] font-semibold  mb-12 text-center">Cart Totals</h2>
+            <div className="flex justify-between mb-4 text-sm md:text-base">
               <span>Subtotal</span>
               <span>Rs. 250,000.00</span>
             </div>
@@ -81,9 +81,10 @@ const Cart = () => {
               <span className="text-[#B88E2F]">Rs. 250,000.00</span>
             </div>
             <div className="flex justify-center items-center">
-              <button className="my-6 h-12 w-48 border-2 border-black/50 hover:text-white rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">
-                <Link href="/Checkout">Check Out</Link>
+            <Link href="/Checkout">
+              <button className="my-6 h-12 w-48 border-2 border-black/50 hover:text-white rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">Checkout
               </button>
+                </Link>
             </div>
           </div>
         </div>

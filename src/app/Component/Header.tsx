@@ -26,7 +26,7 @@ const Header = () => {
       <nav
         className={`flex h-[100px] ${
           isHomePage ? 'bg-mainColor' : 'bg-white'
-        } items-center px-4 md:px-16 justify-between md:justify-end`}
+        } items-center px-4 md:px-32 justify-between md:justify-end`}
       >
         {/* Mobile Layout: Menu Icon */}
         <div className="md:hidden flex items-center">
@@ -39,7 +39,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex w-[430px] h-[24px] gap-8 font-medium">
+        <ul className="hidden md:flex w-[530px] h-[24px] gap-12 font-medium">
           {navBar.map((navItem, index) => (
             <li key={index}>
               <Link href={navItem.link} className="hover:text-secondaryColor">

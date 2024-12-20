@@ -21,8 +21,8 @@ const ContactPage = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-start justify-between mt-12 px-4 lg:px-16 gap-10">
-                <div className="flex flex-col gap-8 lg:w-1/2">
+            <div className="flex flex-col lg:flex-row items-start justify-around mt-20 px-4 lg:px-16 gap-10">
+                <div className="flex flex-col gap-8 ">
                     {[
                         {
                             img: "/Images/location.png",
@@ -41,7 +41,7 @@ const ContactPage = () => {
                         },
                     ].map((info, index) => (
                         <div key={index} className="flex items-start gap-4">
-                            <Image src={info.img} alt={`${info.title}-icon`} width={22} height={28} />
+                            <Image className='mt-1' src={info.img} alt={`${info.title}-icon`} width={22} height={28} />
                             <div>
                                 <h2 className="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold">{info.title}</h2>
                                 <p className="text-[14px] sm:text-[16px] text-gray-700 whitespace-pre-line w-[212px]">
@@ -64,11 +64,11 @@ const ContactPage = () => {
                             <input
                                 type="text"
                                 placeholder={field.placeholder}
-                                className={`${field.label === 'Message'?'h-[166px]':'h-[75px]'} border border-gray-300 rounded-md px-4 py-3 w-full text-[14px] focus:ring-2 focus:ring-[#B88E2F] focus:outline-none`}
+                                className={`${field.label === 'Message'?'h-[166px]':'h-[75px]'} border border-gray-300 rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-[#B88E2F] focus:outline-none md:w-[528px]`}
                             />
                         </div>
                     ))}
-                    <button className="w-full lg:w-[237px] h-[48px] border-[1px] border-black rounded-md mt-4 flex items-center justify-center text-[16px] font-semibold">
+                    <button className="w-full md:w-[237px] h-[48px] border-[1px] border-black rounded-xl mt-4 flex items-center justify-center text-[16px] font-semibold">
                         Submit
                     </button>
                 </div>

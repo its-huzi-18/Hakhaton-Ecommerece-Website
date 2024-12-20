@@ -63,7 +63,7 @@ alt='caoch'
     <div className='flex flex-col gap-4  items-center mt-10 md:-mt-10 mb-8'>
 
 <h2 className='text-[33px] md:text-[36px] font-medium'>Top Picks For You</h2>
-<h4 className='md:text-[16px] text-[13px] ml-4 md:ml-0 font-medium'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</h4>
+<h4 className='md:text-[16px] text-[13px] ml-4 md:ml-0 font-medium text-customGrey'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</h4>
     </div>
 <ProductsItems />
 </div>
@@ -74,7 +74,7 @@ alt='caoch'
 </div>
 <div className=' md:mt-0 h-[600px] md:h-[799px] relative bg-customBg '>
 <Image
-src={'/Images/Asgaard sofa 1.png'}
+src={'/Images/Asgaard sofa .png'}
 width={984}
 height={799}
 alt='Asgaard sofa 1'

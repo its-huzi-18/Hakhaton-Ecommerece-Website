@@ -6,16 +6,6 @@ import Features from '../Component/Features';
 const BlogPage = () => {
   return (
     <>
-      {/* Banner Section */}
-      {/* <div>
-        <Image
-          src={"/images/blog.png"}
-          alt="blog"
-          width={1440}
-          height={316}
-          className="w-full h-auto mt-20"
-        />
-      </div> */}
 <MainImage 
 tittle='Blog'
 />
@@ -89,7 +79,7 @@ tittle='Blog'
             <h3 className="text-[#9F9F9F] text-sm lg:text-base">Wood</h3>
           </div>
           
-          <h1 className=" text-[20px] lg:text-[30px] font-semibold my-4">
+          <h1 className="md:w-[40rem] text-[20px] lg:text-[30px] font-semibold my-4">
             Handmade pieces that took time to make
           </h1>
           <p className="text-[#9F9F9F] mb-8 text-sm lg:text-base">
@@ -115,7 +105,7 @@ tittle='Blog'
               { name: 'Interior', count: 1 },
               { name: 'Wood', count: 6 },
             ].map((category) => (
-              <div key={category.name} className="text-black/30 flex justify-between text-sm lg:text-base">
+              <div key={category.name} className="w-[300px] text-black/30 flex justify-between text-sm lg:text-base">
                 <h3>{category.name}</h3>
                 <span>{category.count}</span>
               </div>
@@ -123,9 +113,9 @@ tittle='Blog'
           </div>
 
           {/* Recent Posts */}
-          <div className='flex  flex-col'>
+          <div className='flex gap-5 flex-col mt-20'>
 
-          <h1 className="text-[24px]  font-semibold my-8">Recent Posts</h1>
+          <h1 className="text-[24px]  font-semibold ">Recent Posts</h1>
           {[
               { src: '/Images/pro1.png', title: 'Going all-in with millennial design' },
             { src: '/Images/pro2.png', title: 'Exploring new ways of decorating' },
