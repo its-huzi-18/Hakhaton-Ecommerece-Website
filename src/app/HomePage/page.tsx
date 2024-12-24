@@ -74,7 +74,7 @@ alt='caoch'
 </div>
 <div className=' md:mt-0 h-[600px] md:h-[799px] relative bg-customBg '>
 <Image
-src={'/Images/Asgaard sofa .png'}
+src={'/Images/Asgaard sofa 1.png'}
 width={984}
 height={799}
 alt='Asgaard sofa 1'
