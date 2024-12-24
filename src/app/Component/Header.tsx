@@ -20,13 +20,12 @@ const Header = () => {
   const pathname = usePathname();
 
   const isHomePage = pathname === '/'; // Check if the current page is the home page
-
   return (
     <div>
       <nav
         className={`flex h-[100px] ${
           isHomePage ? 'bg-mainColor' : 'bg-white'
-        } items-center px-4 md:px-32 justify-between md:justify-end`}
+        } items-center px-4 lg:px-32 justify-between md:justify-end`}
       >
         {/* Mobile Layout: Menu Icon */}
         <div className="md:hidden flex items-center">
@@ -50,7 +49,7 @@ const Header = () => {
         </ul>
 
         {/* Mobile Layout: Icons */}
-        <div className="md:hidden flex gap-6">
+        <div className="md:hidden flex tiny:gap-6 gap-3">
           <Link href={'/Account'}>
             <BsPerson className="text-[24px]" />
           </Link>

@@ -1,13 +1,20 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
-    darkMode: ["class"],
-    content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  content: [
+    './src/**/*.{html,ts,tsx,jsx,js}',
+    './index.html',
   ],
   theme: {
+	screens: {
+		tiny: '320px',
+		xs: '475px',  // Custom xs breakpoint
+		sm: '640px',
+		md: '768px',
+		lg: '1024px',
+		xl: '1280px',
+		'2xl': '1536px',
+	  },
   	extend: {
   		colors: {
   			numBg: '#fbebb5',

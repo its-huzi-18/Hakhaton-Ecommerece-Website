@@ -154,7 +154,7 @@ const AsgaardPage = () => {
                     <span className="text-[#9F9F9F]">Reviews [5]</span>
                 </div>
 
-                <div className="mt-8 text-sm sm:text-base text-[#9F9F9F]  mx-auto md:w-[1026px]">
+                <div className="mt-8 text-sm sm:text-base text-[#9F9F9F]  mx-auto">
                     <p>
                         Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
                     </p>

@@ -22,13 +22,13 @@ const Footer = () => {
             <Link href="/" className="text-[16px] hover:underline">
               Home
             </Link>
-            <Link href="/shop" className="text-[16px] hover:underline">
+            <Link href="/Shop" className="text-[16px] hover:underline">
               Shop
             </Link>
-            <Link href="/about" className="text-[16px] hover:underline">
+            <Link href="/About" className="text-[16px] hover:underline">
               About
             </Link>
-            <Link href="/contact" className="text-[16px] hover:underline">
+            <Link href="/Contact" className="text-[16px] hover:underline">
               Contact
             </Link>
           </div>

@@ -4,7 +4,7 @@ import React from 'react';
 function ProductsItems() {
   return (
     <>
-      <div className="flex flex-wrap gap-6 justify-center md:justify-start items-center">
+      <div className="flex flex-wrap gap-6 justify-center  items-center">
         {/* Product 1 */}
         <div className="flex flex-col items-center md:items-start md:w-[287px]">
           <Image 

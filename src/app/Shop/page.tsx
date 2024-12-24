@@ -12,8 +12,8 @@ const Shop = () => {
         <MainImage tittle="Shop" />
 
         {/* Filter Section */}
-        <div className="hidden md:flex flex-col sm:flex-row items-center justify-around bg-[#F9F1E7] p-4">
-          <div className="flex flex-wrap sm:justify-evenly space-x-4">
+        <div className="hidden  lg:flex flex-col sm:flex-row items-center justify-around bg-[#F9F1E7] p-4">
+          <div className=" flex flex-wrap sm:justify-evenly space-x-4">
             <Image
               src="/Images/dotted-line.svg"
               alt="dotted-line"
