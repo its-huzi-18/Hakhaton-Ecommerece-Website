@@ -9,7 +9,7 @@ const page = () => {
   return (
     <>
     <div className='bg-mainColor md:h-[750px] flex justify-center items-center'>
-<div className='md:-mt-36 w-[50rem]  ml-4 xs:ml-14 flex flex-col'>
+<div className='md:-mt-36  tiny:w-[50rem] ml-4 xs:ml-14 flex flex-col'>
   <div className='text-sm tiny:text-xl xs:leading-tight xs:text-[30px]  sm:text-[40px] md:text-[55px] lg:text-[64px] font-[medium]'>
 <h1 >Rocket single</h1>
 <h1>seater</h1>
@@ -106,95 +106,98 @@ alt='Asgaard sofa 1'
 <p className='font-medium my-5 px-4
    text-[12px] md:text-[16px] text-customGrey'>Find a bright ideal to suit your taste with our great selection</p>
 </div>
-<div className=' flex flex-col px-4 md:px-0  '>
-  <div className=' flex flex-wrap  gap-8 justify-center'>
-    <div className='flex flex-col w-[250px] tiny:w-[300px] sm:w-[350px] md:w-[393px]'>
-      <Image 
+<div className="flex flex-col px-4 md:px-0">
+  <div className="flex flex-wrap gap-4 sm:gap-8 justify-center">
+    {/* Card 1 */}
+    <div className="flex flex-col w-full max-w-[280px] sm:max-w-[350px] md:max-w-[393px]">
+      <Image
         src={'/Images/Rectangle 13.png'}
         width={393}
         height={393}
-        alt='Rectangle 13'
-        className='rounded-[4px] w-full' // Add w-full to ensure it scales down on smaller screens
+        alt="Rectangle 13"
+        className="rounded-[4px] w-full"
       />
-      <div className=' flex flex-col gap-4 justify-evenly'>
-        <h2 className='text-[20px] mt-4 -mb-2 ml-4 tiny:ml-0'>Going all-in with millennial design</h2>
-        <h1 className='text-[24px] text-center mb-2'>
-          <span className='font-medium border-b-2 border-black pb-2'>Read More</span>
+      <div className="flex flex-col gap-3 mt-4">
+        <h2 className="text-[16px] sm:text-[20px] text-center sm:text-left">
+          Going all-in with millennial design
+        </h2>
+        <h1 className="text-[20px] sm:text-[24px] text-center">
+          <span className="font-medium border-b-2 border-black pb-1">Read More</span>
         </h1>
-        <div className='flex items-center h-[24px] justify-center'>
-          <div className='flex gap-4'>
-            <div className='flex gap-2 items-center'>
-              <IoMdTime className='text-[24px]' />
-              <h4 className='text-[16px]'> 5 min</h4>
-            </div>
-            <div className='flex gap-2'>
-              <LuCalendar className='text-[24px]' />
-              <span className='text-[16px]'>12th Oct 2022</span>
-            </div>  
+        <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-4">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <IoMdTime className="text-[20px] sm:text-[24px]" />
+            <h4 className="text-[14px] sm:text-[16px]">5 min</h4>
+          </div>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <LuCalendar className="text-[20px] sm:text-[24px]" />
+            <span className="text-[14px] sm:text-[16px]">12th Oct 2022</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div className='flex flex-col  w-[250px] tiny:w-[300px]  sm:w-[350px]  md:w-[393px] h-auto'>
-      <Image 
+    {/* Card 2 */}
+    <div className="flex flex-col w-full max-w-[280px] sm:max-w-[350px] md:max-w-[393px]">
+      <Image
         src={'/Images/Rectangle 14.png'}
         width={393}
         height={393}
-        alt='Rectangle 14'
-        className='rounded-[4px] w-full' // Add w-full here too
+        alt="Rectangle 14"
+        className="rounded-[4px] w-full"
       />
-      <div className=' md:h-[129px] flex flex-col gap-4 justify-evenly'>
-        <h2 className='text-[20px] mt-4 -mb-2 '>Going all-in with millennial design</h2>
-        <h1 className='text-[24px] text-center mb-2'>
-          <span className='font-medium border-b-2 border-black pb-2'>Read More</span>
+      <div className="flex flex-col gap-3 mt-4">
+        <h2 className="text-[16px] sm:text-[20px] text-center sm:text-left">
+          Going all-in with millennial design
+        </h2>
+        <h1 className="text-[20px] sm:text-[24px] text-center">
+          <span className="font-medium border-b-2 border-black pb-1">Read More</span>
         </h1>
-        <div className='flex items-center h-[24px] justify-center'>
-          <div className='flex gap-4'>
-            <div className='flex gap-2 items-center'>
-              <IoMdTime className='text-[24px]' />
-              <h4 className='text-[16px]'> 5 min</h4>
-            </div>
-            <div className='flex gap-2'>
-              <LuCalendar className='text-[24px]' />
-              <span className='text-[16px]'>12th Oct 2022</span>
-            </div>  
+        <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-4">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <IoMdTime className="text-[20px] sm:text-[24px]" />
+            <h4 className="text-[14px] sm:text-[16px]">5 min</h4>
+          </div>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <LuCalendar className="text-[20px] sm:text-[24px]" />
+            <span className="text-[14px] sm:text-[16px]">12th Oct 2022</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div className='flex flex-col tiny:w-[300px]  sm:w-[350px] md:w-[393px] h-auto'>
-      <Image 
+    {/* Card 3 */}
+    <div className="flex flex-col w-full max-w-[280px] sm:max-w-[350px] md:max-w-[393px]">
+      <Image
         src={'/Images/Rectangle 15.png'}
         width={393}
         height={393}
-        alt='Rectangle 15'
-        className='rounded-[4px] w-full' // Add w-full to scale image properly
+        alt="Rectangle 15"
+        className="rounded-[4px] w-full"
       />
-      <div className=' mb-6 md:mb-0 md:h-[129px] flex flex-col gap-4 justify-evenly'>
-        <h2 className='text-[20px] mt-4 md:-mb-2'>Going all-in with millennial design</h2>
-        <h1 className='text-[24px] text-center mb-2'>
-          <span className='font-medium border-b-2 border-black pb-2'>Read More</span>
+      <div className="flex flex-col gap-3 mt-4">
+        <h2 className="text-[16px] sm:text-[20px] text-center sm:text-left">
+          Going all-in with millennial design
+        </h2>
+        <h1 className="text-[20px] sm:text-[24px] text-center">
+          <span className="font-medium border-b-2 border-black pb-1">Read More</span>
         </h1>
-        <div className='flex items-center h-[24px] justify-center'>
-          <div className='flex gap-4'>
-            <div className='flex gap-2 items-center'>
-              <IoMdTime className='text-[24px]' />
-              <h4 className='text-[16px]'> 5 min</h4>
-            </div>
-            <div className='flex gap-2'>
-              <LuCalendar className='text-[24px]' />
-              <span className='text-[16px]'>12th Oct 2022</span>
-            </div>  
+        <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-4">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <IoMdTime className="text-[20px] sm:text-[24px]" />
+            <h4 className="text-[14px] sm:text-[16px]">5 min</h4>
+          </div>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <LuCalendar className="text-[20px] sm:text-[24px]" />
+            <span className="text-[14px] sm:text-[16px]">12th Oct 2022</span>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 </div>
+
+
 
 </div>
 <div className='flex justify-center my-10 '>
