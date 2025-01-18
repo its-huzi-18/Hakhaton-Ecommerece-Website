@@ -15,6 +15,7 @@ const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   useCdn: false,
+  myApi:process.env.myApi,
   token: process.env.SANITY_API_TOKEN,
   apiVersion: '2021-08-31',
 });
@@ -43,7 +44,7 @@ async function uploadImage(imageUrl) {
 async function importData() {
   try {
     // Fetch data from the API
-    const { data } = await axios.get('https://template-0-beta.vercel.app/api/product');
+    const { data } = await axios.get(myApi)
 
     // Insert each product into Sanity
     for (const product of data) {
