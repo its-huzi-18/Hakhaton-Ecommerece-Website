@@ -181,7 +181,7 @@ const AsgaardPage = () => {
 <hr />
             <h1 className="text-center text-2xl sm:text-4xl font-semibold mt-14">Related Products</h1>
             <div className="flex justify-center px-4">
-                {/* <ProductsItems /> */}
+                <ProductsItems />
             </div>
             <div className="mt-10 flex justify-center">
                 <h3 className="pb-2 my-10 text-lg sm:text-2xl border-b-2 border-black/60">View More</h3>
