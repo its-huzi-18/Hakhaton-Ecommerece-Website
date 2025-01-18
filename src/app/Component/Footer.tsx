@@ -1,10 +1,18 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 
 const Footer = () => {
+  const pathname = usePathname();
+  const isTrackPage = pathname === '/ShipmentPage'
+
   return (
     <>
-  <div className="flex flex-col justify-center items-center px-4 py-8 md:pt-16 bg-white">
+  <div className={`
+    ${isTrackPage ? 'bg-gray-900 text-slate-500' : 'bg-white'}
+    flex flex-col justify-center items-center px-4 py-8 md:pt-16 `}>
   {/* Main Footer Section */}
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center lg:text-left font-medium">
     {/* Address Section */}
@@ -58,7 +66,7 @@ const Footer = () => {
             placeholder="Enter Your Email Address"
           />
         </div>
-        <button className="text-black text-[16px] border-b-2 border-black pb-1 w-full sm:w-auto">
+        <button className={`${isTrackPage ? 'text-slate-600' :'text-black'}  text-[16px] border-b-2 border-black pb-1 w-full sm:w-auto`}>
           Subscribe
         </button>
       </div>
@@ -66,7 +74,7 @@ const Footer = () => {
   </div>
   <hr className="w-full mt-6" />
 </div>
-<div className="md:ml-14 mb-6 flex justify-center md:block">
+<div className={`${isTrackPage ? 'bg-gray-900 text-white':'bg-white'} md:pl-14 pb-6 flex justify-center md:block`}>
   <p className="text-[16px]">2022 Meubel House. All rights reserved</p>
 </div>
 

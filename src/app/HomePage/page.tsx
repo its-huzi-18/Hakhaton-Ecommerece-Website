@@ -3,8 +3,10 @@ import React from 'react'
 import { IoMdTime } from 'react-icons/io'
 import { LuCalendar } from 'react-icons/lu'
 import ProductsItems from '../Component/ProductsItems'
+import { usePathname } from 'next/navigation';
 
-const page = () => {
+
+const Page = () => {
 
   return (
     <>
@@ -224,4 +226,4 @@ alt='Group 43'
   )
 }
 
-export default page
+export default Page

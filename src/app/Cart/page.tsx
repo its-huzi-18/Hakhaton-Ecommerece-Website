@@ -80,9 +80,13 @@ const Cart = () => {
               <span>Total</span>
               <span className="text-[#B88E2F]">Rs. 250,000.00</span>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex gap-4 flex-col justify-center items-center">
             <Link href="/Checkout">
-              <button className="my-6 h-12 w-48 border-2 border-black/50 hover:text-white rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">Checkout
+              <button className=" h-12 w-48 border-2 border-black/50 hover:text-white rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">Checkout
+              </button>
+                </Link>
+            <Link href="/ShipmentPage">
+              <button className=" bg-green-500 h-12 w-48 border-2 border-black/50 text-zinc-900 hover:text-white rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">Track Order
               </button>
                 </Link>
             </div>

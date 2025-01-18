@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { BsPerson } from 'react-icons/bs';
@@ -20,12 +19,14 @@ const Header = () => {
   const pathname = usePathname();
 
   const isHomePage = pathname === '/'; // Check if the current page is the home page
+  const trackPage = pathname === '/ShipmentPage'
   return (
     <div>
      <nav
-  className={`relative flex h-[100px] ${
-    isHomePage ? 'bg-mainColor' : 'bg-white'
-  } items-center px-4 lg:px-32 justify-between md:justify-end`}
+className={`relative flex h-[100px] ${
+  trackPage ? 'bg-gray-900 text-white' : isHomePage ? 'bg-mainColor' : 'bg-white'
+} items-center px-4 lg:px-32 justify-between md:justify-end`}
+
 >
   {/* Mobile Layout: Menu Icon */}
   <div className="md:hidden flex items-center z-20">
