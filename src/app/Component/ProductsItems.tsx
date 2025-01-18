@@ -1,88 +1,52 @@
+import { client } from '@/sanity/lib/client';
+import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
-import React from 'react';
 
-function ProductsItems() {
-  return (
-    <>
-      <div className="flex flex-wrap gap-6 justify-center  items-center">
-        {/* Product 1 */}
-        <div className="flex flex-col items-center md:items-start md:w-[287px]">
-          <Image 
-            src={'/Images/guestCaoch.png'}
-            width={287}
-            height={287}
-            alt="Trenton modular sofa"
-            className="w-full max-w-[287px] h-auto"
-          />
-          <div className="flex flex-col mt-4 text-center md:text-left">
-            <h3 className="font-medium text-[16px] md:w-[212px] leading-tight">
-              Trenton modular sofa_3
-            </h3>
-            <h4 className="font-medium text-[24px] mt-2 text-gray-700">
-              Rs. 25,000.00
-            </h4>
-          </div>
-        </div>
-
-        {/* Product 2 */}
-        <div className="flex flex-col items-center md:items-start md:w-[287px]">
-          <Image 
-            src={'/Images/Granite dining table.png'}
-            width={287}
-            height={287}
-            alt="Granite dining table"
-            className="w-full max-w-[287px] h-auto"
-          />
-          <div className="flex flex-col mt-4 text-center md:text-left">
-            <h3 className="font-medium text-[16px] md:w-[212px] leading-tight">
-              Granite dining table with dining chair
-            </h3>
-            <h4 className="font-medium text-[24px] mt-2 text-gray-700">
-              Rs. 25,000.00
-            </h4>
-          </div>
-        </div>
-
-        {/* Product 3 */}
-        <div className="flex flex-col items-center md:items-start md:w-[287px]">
-          <Image 
-            src={'/Images/Outdoor bar table.png'}
-            width={287}
-            height={287}
-            alt="Outdoor bar table"
-            className="w-full max-w-[287px] h-auto"
-          />
-          <div className="flex flex-col mt-4 text-center md:text-left">
-            <h3 className="font-medium text-[16px] md:w-[212px] leading-tight">
-              Outdoor bar table and stool
-            </h3>
-            <h4 className="font-medium text-[24px] mt-2 text-gray-700">
-              Rs. 25,000.00
-            </h4>
-          </div>
-        </div>
-
-        {/* Product 4 */}
-        <div className="flex flex-col items-center md:items-start md:w-[287px]">
-          <Image 
-            src={'/Images/Plain console.png'}
-            width={287}
-            height={287}
-            alt="Plain console"
-            className="w-full max-w-[287px] h-auto"
-          />
-          <div className="flex flex-col mt-4 text-center md:text-left">
-            <h3 className="font-medium text-[16px] md:w-[212px] leading-tight">
-              Plain console with teak mirror
-            </h3>
-            <h4 className="font-medium text-[24px] mt-2 text-gray-700">
-              Rs. 25,000.00
-            </h4>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+interface ProductType{
+  _id:string,
+  name:string
+  image:any
+  price:number,
+  stockLevel:number
 }
 
-export default ProductsItems;
+const ProductItems = async () => {
+  // Fetch products using the Sanity client
+  const products:ProductType[] = await client.fetch(
+    `*[_type == 'product']{
+      _id,
+      name,
+      image,
+      price,
+      stockLevel
+    }[1..5]`
+  );
+  const filteredProducts = products.filter((_, index) => index !== 3);
+  return (
+    <div className='flex items-center justify-center gap-12 flex-wrap'>
+      {filteredProducts.map((detail, i: number) => (
+        <div className='flex flex-col gap-3' key={detail._id}>
+          <Image
+            src={urlFor(detail.image).url()}
+            width={300}
+            height={300}
+            alt={detail.name}
+          />
+          <div className='w-[260px] gap-2 flex flex-col'>
+            <h3 className='font-medium text-[16px] w-[212px] '>
+              {detail.name}
+            </h3>
+            <div className='flex justify-between items-center'>
+            <h4 className=' font-medium'>
+              {detail.price}$
+            </h4>
+            <h4>Item:{detail.stockLevel}</h4>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ProductItems;

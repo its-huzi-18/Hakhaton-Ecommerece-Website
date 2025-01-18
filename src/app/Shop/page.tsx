@@ -36,7 +36,7 @@ const Shop = () => {
               height={25}
             />
             <div className="flex items-center gap-2 text-xs sm:text-sm md:text-base border-l-2 border-black/30 pl-4">
-              <h3>Showing 1–16 of 32 results</h3>
+              <h3>Showing 1–21 of 32 results</h3>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ const Shop = () => {
               <h2 className="text-xs sm:text-sm md:text-base">Show</h2>
               <div className="w-[45px] sm:w-[55px] h-[45px] sm:h-[55px] bg-white flex items-center justify-center rounded-md">
                 <h3 className="text-[#9F9F9F] text-xs sm:text-sm md:text-base">
-                  16
+                  21
                 </h3>
               </div>
             </div>
