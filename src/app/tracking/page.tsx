@@ -20,6 +20,7 @@ const TrackingPage = () => {
       setLabelId(queryLabelId);
       fetchTrackingData(queryLabelId);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [queryLabelId]);
 
   const fetchTrackingData = async (id: string) => {
