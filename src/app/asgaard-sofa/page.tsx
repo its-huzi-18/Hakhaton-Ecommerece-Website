@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import ProductsItems from '../Component/ProductsItems';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import { IoIosHeartEmpty } from 'react-icons/io';
+import ProductItems from '../Component/ProductsItems';
 
 const AsgaardPage = () => {
     return (
@@ -181,7 +181,7 @@ const AsgaardPage = () => {
 <hr />
             <h1 className="text-center text-2xl sm:text-4xl font-semibold mt-14">Related Products</h1>
             <div className="flex justify-center px-4">
-                <ProductsItems />
+                {/* <ProductItems /> */}
             </div>
             <div className="mt-10 flex justify-center">
                 <h3 className="pb-2 my-10 text-lg sm:text-2xl border-b-2 border-black/60">View More</h3>

@@ -79,7 +79,7 @@ alt='caoch'
 <h4 className='md:text-[16px] text-[13px] px-4
  font-medium text-customGrey'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</h4>
     </div>
-<ProductsItems />
+{/* <ProductsItems /> */}
 </div>
 <div className='my-10 flex justify-center '>
                 <h3 className=' text-[24px] border-b-2  border-black'> View More</h3>
