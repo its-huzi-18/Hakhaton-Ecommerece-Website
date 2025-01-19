@@ -1,71 +1,63 @@
 import MainImage from '@/app/Component/MainImage';
 import React from 'react';
 import Features from '../Component/Features';
-import Image from 'next/image';
 import Pagination from '../Component/Pagination';
-import ProductDetails from '../Component/ProductDetails';
+import FilteredHead from '../Component/FilteredHead';
+import { client } from '@/sanity/lib/client';
+import { urlFor } from '@/sanity/lib/image';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Shop = () => {
+interface ProductType{
+  _id:string,
+  name:string
+  image:any
+  price:number,
+  stockLevel:number
+}
+const Shop = async() => {
+  const products:ProductType[] = await client.fetch(
+    `*[_type == 'product']{
+      _id,
+      name,
+      image,
+      price,
+      stockLevel
+    }`
+  );
+
   return (
     <>
       <div>
         <MainImage tittle="Shop" />
+       <FilteredHead />
 
-        {/* Filter Section */}
-        <div className="hidden  lg:flex flex-col sm:flex-row items-center justify-around bg-[#F9F1E7] p-4">
-          <div className=" flex flex-wrap sm:justify-evenly space-x-4">
-            <Image
-              src="/Images/dotted-line.svg"
-              alt="dotted-line"
-              width={25}
-              height={25}
+        {/* Product Details */}
+        <div className='flex items-center justify-center gap-12 flex-wrap'>
+      {products.map((detail, i: number) => (
+        <div className='flex flex-col gap-3' key={detail._id}>
+          <Link href={`/DetailPage/${detail._id}`}>
+          <Image
+            src={urlFor(detail.image).url()}
+            width={300}
+            height={300}
+            alt={detail.name}
             />
-            <h3 className="text-sm md:text-base lg:text-lg font-semibold">
-              Filter
+            </Link>
+          <div className='w-[260px] gap-2 flex flex-col'>
+            <h3 className='font-medium text-[16px] w-[212px] '>
+              {detail.name}
             </h3>
-            <Image
-              src="/Images/four-dot.svg"
-              alt="four-dot"
-              width={25}
-              height={25}
-            />
-            <Image
-              src="/Images/square-line.svg"
-              alt="square-line"
-              width={25}
-              height={25}
-            />
-            <div className="flex items-center gap-2 text-xs sm:text-sm md:text-base border-l-2 border-black/30 pl-4">
-              <h3>Showing 1–21 of 32 results</h3>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap items-center sm:space-x-4 mt-4 sm:mt-0">
-            {/* Show Section */}
-            <div className="flex gap-2 items-center">
-              <h2 className="text-xs sm:text-sm md:text-base">Show</h2>
-              <div className="w-[45px] sm:w-[55px] h-[45px] sm:h-[55px] bg-white flex items-center justify-center rounded-md">
-                <h3 className="text-[#9F9F9F] text-xs sm:text-sm md:text-base">
-                  21
-                </h3>
-              </div>
-            </div>
-
-            {/* Sort By Section */}
-            <div className="flex gap-2 items-center">
-              <h3 className="text-xs sm:text-sm md:text-base">Sort by</h3>
-              <div className="w-[128px] sm:w-[188px] bg-white h-[45px] sm:h-[55px] flex items-center justify-center rounded-md">
-                <h3 className="text-[#9F9F9F] text-xs sm:text-sm md:text-base">
-                  Default
-                </h3>
-              </div>
+            <div className='flex justify-between items-center'>
+            <h4 className=' font-medium'>
+              {detail.price}$
+            </h4>
+            <h4>Item:{detail.stockLevel}</h4>
             </div>
           </div>
         </div>
-
-        {/* Product Details */}
-        <ProductDetails />
-
+      ))}
+    </div>
         {/* Pagination */}
         <div className="my-10">
           <Pagination />

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import { IoIosHeartEmpty } from 'react-icons/io';
-import ProductItems from '../Component/ProductsItems';
 
 const AsgaardPage = () => {
     return (
