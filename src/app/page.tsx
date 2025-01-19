@@ -5,6 +5,7 @@ import { LuCalendar } from 'react-icons/lu'
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import Link from 'next/link';
 
 interface ProductType{
   _id:string,
@@ -102,12 +103,14 @@ alt='caoch'
 <div className='flex items-center justify-center gap-12 flex-wrap'>
       {filteredProducts.map((detail, i: number) => (
         <div className='flex flex-col gap-3' key={detail._id}>
+          <Link href = {`/DetailPage/${detail._id}`}>
           <Image
             src={urlFor(detail.image).url()}
             width={300}
             height={300}
             alt={detail.name}
-          />
+            />
+            </Link>
           <div className='w-[260px] gap-2 flex flex-col'>
             <h3 className='font-medium text-[16px] w-[212px] '>
               {detail.name}
