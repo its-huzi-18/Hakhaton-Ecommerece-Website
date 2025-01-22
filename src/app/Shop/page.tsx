@@ -99,8 +99,8 @@ const Shop = () => {
         ) : (
           <div className="flex items-center justify-center gap-12 flex-wrap">
             {filteredProducts.map((detail) => (
-              <div className="flex flex-col gap-3" key={detail._id}>
-                <Link href={`/DetailPage/${detail._id}`}>
+              <div className="flex flex-col gap-3 hover:shadow-lg shadow-black rounded-md p-4" key={detail._id}>
+                <Link  href={`/DetailPage/${detail._id}`}>
                   <Image
                     src={urlFor(detail.image)?.url() || '/placeholder.png'} // Fallback image
                     width={300}

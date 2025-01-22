@@ -4,7 +4,9 @@ import Image from 'next/image';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import { IoIosHeartEmpty } from 'react-icons/io';
+import CartManager from '@/app/Component/AddToCart';
 import Link from 'next/link';
+import QuantityUpdater from '@/app/Component/CartQuantity';
 
 interface ProductType{
   _id:string,
@@ -141,15 +143,22 @@ const ProductDetails = async ({params}:{params:{id:string}}) => {
         
                             {/* Quantity and Actions */}
                             <div className="flex flex-col sm:flex-row items-center gap-3 mt-6">
-                                <div className="flex items-center border border-black/50 rounded-2xl w-32 sm:w-[123px] h-12 sm:h-[64px]">
+                                {/* <div className="flex items-center border border-black/50 rounded-2xl w-32 sm:w-[123px] h-12 sm:h-[64px]">
                                     <button className="px-3">-</button>
                                     <span className="px-4">1</span>
                                     <button className="px-3">+</button>
-                                </div>
-        
-                                <button className="w-full sm:w-[215px] h-12 sm:h-[64px] bg-transparent text-black rounded-2xl border border-black flex items-center justify-center gap-2 mt-4 sm:mt-0 sm:ml-3">
-                                    Add To Cart
-                                </button>
+                                </div> */}
+                            
+                              
+            <CartManager
+              product={{
+                id: data._id,
+                name: data.name,
+                price: data.price,
+                image: urlFor(data.image).url(),
+                quantity: 1,
+              }}
+            />
                             </div>
                             <div className='my-12'>
         <hr />
