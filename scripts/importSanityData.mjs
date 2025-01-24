@@ -18,6 +18,7 @@ const client = createClient({
   myApi:process.env.myApi,
   token: process.env.SANITY_API_TOKEN,
   apiVersion: '2021-08-31',
+  requestTimeout: 60000,
 });
 
 async function uploadImage(imageUrl) {
