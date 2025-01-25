@@ -31,7 +31,7 @@ const Shop = () => {
     const fetchProducts = async () => {
       try {
         const fetchedProducts: ProductType[] = await client.fetch(
-          `*[_type == 'product']{
+          `*[_type == 'product'][0..21]{
             _id,
             name,
             image,
