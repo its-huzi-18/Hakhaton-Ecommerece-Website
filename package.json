@@ -10,9 +10,9 @@
     "import-data": "node scripts/importSanityData.mjs"
   },
   "dependencies": {
-    "@sanity/client": "3.71.2",
+    "@sanity/client": "3.69.0",
     "@sanity/image-url": "^1.1.0",
-    "@sanity/types": "^3.71.2",
+    "@sanity/types": "^3.69.0",
     "@sanity/vision": "^3.69.0",
     "@sentry/nextjs": "^8.51.0",
     "axios": "^1.7.9",
