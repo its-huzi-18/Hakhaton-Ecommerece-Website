@@ -10,10 +10,10 @@
     "import-data": "node scripts/importSanityData.mjs"
   },
   "dependencies": {
-    "@sanity/client": "^6.27.1",
+    "@sanity/client": "^6.25.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/types": "^3.69.0",
-    "@sanity/vision": "^3.71.2",
+    "@sanity/vision": "^3.69.0",
     "@sentry/nextjs": "^8.51.0",
     "@tanstack/react-table": "^8.20.6",
     "axios": "^1.7.9",
