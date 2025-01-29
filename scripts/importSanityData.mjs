@@ -15,7 +15,7 @@ const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   useCdn: false,
-  myApi:process.env.myApi,
+  // myApi:process.env.myApi,
   token: process.env.SANITY_API_TOKEN,
   apiVersion: '2021-08-31',
   requestTimeout: 60000,
@@ -28,7 +28,7 @@ async function uploadImage(imageUrl) {
     if (!response.ok) {
       throw new Error(`Failed to fetch image: ${response.statusText}`);
     }
-    const imageBuffer = await response.buffer();
+    const imageBuffer = await response.arrayBuffer();
 
     // Upload the image to Sanity
     const asset = await client.assets.upload('image', imageBuffer, {
@@ -45,7 +45,7 @@ async function uploadImage(imageUrl) {
 async function importData() {
   try {
     // Fetch data from the API
-    const { data } = await axios.get(myApi)
+    const { data } = await axios.get("https://template-0-beta.vercel.app/api/product")
 
     // Insert each product into Sanity
     for (const product of data) {
